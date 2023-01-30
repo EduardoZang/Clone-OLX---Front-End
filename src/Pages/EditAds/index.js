@@ -60,7 +60,7 @@ console.log(errors)
         fData.append('price',adInfo.price);
         fData.append('priceneg',adInfo.priceNegotiable);
         fData.append('desc',adInfo.description);
-        fData.append('category',adInfo.category._id || adInfo.category);
+        fData.append('cat',adInfo.category._id || adInfo.category);
 
         if(fileFild.current.files.length > 0){
 
@@ -124,13 +124,13 @@ console.log(errors)
                         <div className='area--input'>
                             <select
                                 disabled={disabled}
-                                value={adInfo.category?._id}
+                                value={adInfo.category?.slug}
                                 onChange={e=>setAdInfo({...adInfo,category: e.target.value})}
                                 required
                             >
                                 <option></option>
-                                {categories && categories.map(i =>
-                                    <option key={i._id} value={i._id}>{i.name}</option>
+                                {categories && categories.map((i,k) =>
+                                    <option key={k} value={i.slug}>{i.name}</option>
                                     )}
         
                             </select>
@@ -193,9 +193,6 @@ console.log(errors)
                         </div>
                     </label>
                 </form>
-
-                            <button className='botao-check'>Vendido!</button>        
-                            <button className='botao-excluir'>Excluir Anúncio</button>
 
             </PageArea>
 

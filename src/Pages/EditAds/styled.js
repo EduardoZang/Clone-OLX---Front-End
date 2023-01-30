@@ -76,48 +76,6 @@ export const PageArea = styled.div`
         }
     }
 
-    .botao-excluir{
-        font-weight: bold;
-        color: white;
-        background-color: red;
-        cursor: pointer;
-        outline: 0;
-        font-size: 15px;
-        border: 0;
-        border-radius: 4px;
-        padding: 5px 10px;
-        margin-top: 10px;
-        margin-left: 8%;
-        text-align: center;
-        
-
-        &:hover{
-            background-color: orange;
-            color: blue;
-            transition: 0.6s;
-        }
-    }
-
-    .botao-check{
-        font-weight: bold;
-        color: white;
-        background-color: green;
-        cursor: pointer;
-        outline: 0;
-        font-size: 15px;
-        border: 0;
-        border-radius: 4px;
-        padding: 5px 10px;
-        margin-top: 10px;
-        margin-left: 30%;
-
-        &:hover{
-            background-color: orange;
-            color: blue;
-            transition: 0.6s;
-        }
-    }
-
 @media (max-width: 600px){
 
 form{
@@ -141,23 +99,12 @@ form{
                 margin-left: 0;
                 width: 92%;
                 padding: 10px;
-            }
-        }
+             }
+         }
         
-    }
-}
+     }
+ }
 
-.botao-excluir{
-    margin-left: 30%;
-    padding: 20px;
-    margin-top: 20px;
-}
+} 
 
-.botao-check{
-    margin-left: 37%;
-    padding: 20px;
-    margin-top: 20px; 
-}
-
-}
 `;

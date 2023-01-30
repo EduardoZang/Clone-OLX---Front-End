@@ -128,7 +128,8 @@ const handleSubmit = async (e) => {
                              disabled={disabled} 
                              value={password}
                              onChange = {e => setPassword(e.target.value)}
-                             
+                             required
+
                              />
                         </div>
                     </label>
@@ -140,6 +141,7 @@ const handleSubmit = async (e) => {
                              disabled={disabled} 
                              value={confirmPassword}
                              onChange = {(e) => setConfirmPassword(e.target.value)}
+                             required
                              
                              />
                         </div>
@@ -166,7 +168,8 @@ const handleSubmit = async (e) => {
                         <div className="edit-anuncio">
 
                             <AdItem key={k} data={otherOferts._doc}/>
-                                <Link to={'/edit-ads/'+otherOferts._doc._id} className='botao-link'>Editar Anúncio</Link>
+                                <Link to={'/edit-ads/'+otherOferts._doc._id} className='botao-link' 
+                                onClick={() => ({...otherOferts._doc, category:otherOferts.catogory})}>Editar Anúncio</Link>
                         </div>
                         </>
                         ) }
